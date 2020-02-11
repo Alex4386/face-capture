@@ -1,0 +1,8 @@
+# The glorious gitignore file
+
+# PyCache, boom, now ded.
+__pycache__/
+
+# Credentials, should be gone
+Persistent/Credentials.py
+
