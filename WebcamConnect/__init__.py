@@ -3,6 +3,7 @@ import WebcamConnect.Resolution as Resolution
 
 
 class VideoStream():
+    '''The VideoStream handler class for retrieving frames from the webcam'''
     connected = False
 
     def __init__(self, videoStream):
@@ -30,8 +31,11 @@ class VideoStream():
         return self.connected
 
     def getFrame(self, resolution=None):
-        '''get CurrentFrame from the VideoCapture (not safe, should be checked with `isConnected` beforehand)'''
-        success, tmpFrame = self.vc.read()
+        '''
+        get CurrentFrame from the VideoCapture  
+        (not safe, should be checked with `isConnected` beforehand)
+        '''
+        _, tmpFrame = self.vc.read()
         if resolution is not None:
             tmpFrame = cv2.resize(tmpFrame, resolution)
 

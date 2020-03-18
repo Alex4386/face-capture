@@ -1,7 +1,7 @@
+import cv2
 from WebcamConnect import VideoStream
 import WebcamConnect.Resolution as Resolution
 import Persistent
-import cv2
 
 vs = VideoStream(Persistent.Credentials.labCameraAddress)
 
