@@ -11,5 +11,6 @@ while True:
     frame = vs.getFrame(
         resolution=Resolution.FullHD
     )
+    print("got frame!")
     cv2.imshow("Apple", frame)
     cv2.waitKey(5)
